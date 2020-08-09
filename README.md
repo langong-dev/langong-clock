@@ -3,4 +3,3 @@
 A simple clock(timer) with QT
 
 
-
