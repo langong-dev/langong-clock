@@ -14,11 +14,15 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void crt();
 
 private slots:
     void on_lcdNumber_overflow();
 
     void on_pushButton_clicked();
+
+    void on_actionStop_clock_triggered();
+
 
 private:
     Ui::MainWindow *ui;
