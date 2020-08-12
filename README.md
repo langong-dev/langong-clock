@@ -7,7 +7,6 @@ A simple clock(timer) with QT
 ```sh
 git clone https://github.com/langong-dev/langong-clock.git
 cd langong-clock
-qmake Clock.pro
 make
 
 ## Linux and MacOS
