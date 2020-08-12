@@ -3,6 +3,35 @@
 #include <QThread>
 #include <QTime>
 #include <QString>
+#include <QMessageBox>
+
+void mkhelp ()
+{
+
+    QMessageBox *msgBox;
+    msgBox = new QMessageBox(
+                "Help",
+                "<b>Set clocks</b><br>Input min and sec in input boxes and click <code>Start</code> to start clock<br><b>Stop clock</b><br>Press 'P' or click menu 'Clock->Stop'",
+                QMessageBox::Information,
+                QMessageBox::Cancel | QMessageBox::Escape,
+                0,
+                0);
+    msgBox->show();
+}
+
+void mkabout ()
+{
+
+    QMessageBox *msgBox;
+    msgBox = new QMessageBox(
+                "About",
+                "LanGong Clock is made by <a href=\"https://langong-dev.github.io\">LanGong Dev Team</a> and undered MIT-License. Published at GitHub, <a href=\"https://github.com/langong-dev/langong-clock\">Repo langong-dev/langong-clock</a>. And made with QT5.<br>&copy; 2020 LanGong.",
+                QMessageBox::Information,
+                QMessageBox::Cancel | QMessageBox::Escape,
+                0,
+                0);
+    msgBox->show();
+}
 
 int nsec, nmin;
 
@@ -84,3 +113,13 @@ void MainWindow::on_actionStop_clock_triggered()
     nsec = nmin = 0;
 }
 
+
+void MainWindow::on_actionHelp_triggered()
+{
+    mkhelp();
+}
+
+void MainWindow::on_actionAbout_triggered()
+{
+    mkabout();
+}
