@@ -27,7 +27,8 @@ jobs:
     - name: Make test
       run: |
         mkdir windows
-        del .qmake.stash Makefile
+        del .qmake.stash
+        del Makefile
         ls
         cd windows
         qmake ../Clock.pro
