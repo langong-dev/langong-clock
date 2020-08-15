@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Make-Win
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -25,4 +25,8 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Make test
       run: |
-        make --help
+        mkdir windows
+        cp * windows
+        ls
+        make
+        ls
