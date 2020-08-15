@@ -26,7 +26,7 @@ jobs:
     - name: Make test
       run: |
         mkdir windows
-        cp * windows
+        copy * windows
         ls
         make
         ls
